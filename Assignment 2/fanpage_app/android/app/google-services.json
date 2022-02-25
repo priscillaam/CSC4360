@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "152157986985",
+    "project_id": "fir-fanpage",
+    "storage_bucket": "fir-fanpage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152157986985:android:6f398f02c3a1c832e489b8",
+        "android_client_info": {
+          "package_name": "com.example.fanpage_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152157986985-pcr6n0824vgttun6kvg6kdksvj5rffpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAy_1g01sQk1kT6rgQ0x3HlvlVs9dIwFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152157986985-pcr6n0824vgttun6kvg6kdksvj5rffpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
