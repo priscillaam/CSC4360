@@ -1,1 +1,1 @@
-# CSC4360
+# Basic Flutter App
