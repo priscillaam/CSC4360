@@ -36,12 +36,10 @@ class _SplashState extends State<Splash> {
             Container(
               height: 100,
               width: 100,
-              color: Colors.blue,
-            ),
-            Container(
-              child: const Text(
-                "Splash Screen",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('images/picture.JPG'),
+                ),
               ),
             ),
           ],
