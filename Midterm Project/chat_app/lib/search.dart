@@ -75,16 +75,18 @@ class _SearchUserState extends State<SearchUser> {
   Widget searchList(searchSnapshot) {
     // ignore: unnecessary_null_comparison
     return searchSnapshot != null
-        ? ListView.builder(
-            itemCount: searchSnapshot.docs.length,
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return SearchTile(
-                fName: searchSnapshot.docs[index].data()['First Name'],
-                lName: searchSnapshot.docs[index].data()['First Name'],
-                userId: searchSnapshot.docs[index].data()["userID"],
-              );
-            })
+        ? Flexible(
+            child: ListView.builder(
+                itemCount: searchSnapshot.docs.length,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return SearchTile(
+                    fName: searchSnapshot.docs[index]?.data()['First Name'],
+                    lName: searchSnapshot.docs[index]?.data()['First Name'],
+                    userId: searchSnapshot.docs[index]?.data()["userID"],
+                  );
+                }),
+          )
         : Container();
   }
 
@@ -113,7 +115,7 @@ class _SearchUserState extends State<SearchUser> {
     return Scaffold(
       backgroundColor: Colors.orange.shade50,
       appBar: AppBar(
-        title: const Text('Chat',
+        title: const Text('Search',
             style: TextStyle(
               fontSize: 28.0,
               fontWeight: FontWeight.bold,
@@ -126,7 +128,7 @@ class _SearchUserState extends State<SearchUser> {
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             child: Row(
               children: [
-                Container(
+                Expanded(
                     child: TextField(
                   controller: searchController,
                   decoration: const InputDecoration(

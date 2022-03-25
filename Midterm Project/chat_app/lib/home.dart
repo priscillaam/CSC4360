@@ -81,10 +81,10 @@ class _HomeState extends State<Home> {
 
       // body: chatRoomList(),
       body: Column(
-        children: <Widget>[
-          const CategorySelector(),
-          const SearchBar(),
-          const RecentChats(),
+        children: const <Widget>[
+          CategorySelector(),
+          SearchBar(),
+          RecentChats(),
           // Expanded(
           //   child: Container(
           //     child: Column(

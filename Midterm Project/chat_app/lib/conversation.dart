@@ -35,8 +35,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
         return ListView.builder(
           itemCount: snapshot.data!.docs.length,
           itemBuilder: (context, index) {
-            return MessageTile(snapshot.data.docs[index].get('message'),
-                snapshot.data.docs[index].get('sendBy') == Constants.myName);
+            return MessageTile(snapshot.data.docs[index]?.get('message'),
+                snapshot.data.docs[index]?.get('sendBy') == Constants.myName);
           },
         );
       },
@@ -50,7 +50,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
         'sendBy': Constants.myName,
       };
       databaseMethods.addConversationMsgs(widget.chatRoomId, msgMap);
-      messageController.text = ' ';
+      messageController.text = '';
     }
   }
 
